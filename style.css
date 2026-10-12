@@ -3,20 +3,22 @@ body{
     padding: 0;
     padding-top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .calculator{
-    height: 80vh;
-    width: 50vw;
-    background: linear-gradient(rgb(157, 133, 133),rgb(252, 255, 51),rgb(133, 0, 0));
+    height: 70vh;
+    width: 37vw;
+    background: rgba(0, 0, 0,0.8);
     box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
+    box-shadow: 3px 3px 0px 1px rgba(0, 0, 0,0.4);
 }
 
 .screen{
@@ -30,15 +32,16 @@ body{
     height: 60%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .operands{
     height: 100%;
     width: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    gap: 10px;
     flex-direction: column;
 }
 
@@ -46,12 +49,63 @@ body{
     height: 100%;
     width: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    gap: 10px;
     flex-direction: column;
 }
 
 button{
     height: 55px;
     width: 75px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 4px 2px rgba(0, 0, 0,0.2);
+    background: linear-gradient(to right, rgb(255,255,255), rgb(255, 255, 255),rgba(203, 202, 202, 0.4));
+    background-size: 200%;
+    background-position: left center;
+    transition: 0.3s;
+    font-size: 25px;
+}
+
+.row-four{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.row-four button{
+    width: 75%;
+}
+
+.shelf-one, .shelf-two, .shelf-three, .shelf-four{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.shelf-three button{
+    width: 42%;
+}
+
+.shelf-four button{
+    width: 85%;
+}
+
+button:hover{
+    background-position: right;
+}
+
+button:active{
+    transition: 0.1s;
+    transform: scale(0.9);
+}
+
+.operators button{
+    background: rgb(255, 120, 47);
+}
+
+.operators button:hover{
+    background: rgb(219, 92, 24);
 }
