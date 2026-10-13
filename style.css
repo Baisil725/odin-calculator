@@ -109,3 +109,11 @@ button:active{
 .operators button:hover{
     background: rgb(219, 92, 24);
 }
+
+.screen{
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 40px;
+}
